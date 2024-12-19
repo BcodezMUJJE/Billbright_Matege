@@ -90,5 +90,51 @@ section{
 
 .home-detail p{
     font-size: 1.6rem;
-    margin-top: 1rem 0 2.5rem;
+    margin-top: 2rem 0 2.5rem;
+}
+
+.home-detail .btn-sci{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--secondary-color);
+    border: .2rem solid var(--secondary-color);
+    border-radius: 4.5rem;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    font-weight: 500;
+    transition: 0.3s;
+    box-shadow: 0 0 1rem var(--secondary-color);
+}
+
+.btn:hover{
+    background-color: transparent;
+    border-color: var(--white-color);
+    box-shadow: none;
+}
+
+.home-detail .btn-sci .sci{
+    margin-left: 2rem;
+}
+
+.home-detail .btn-sci .sci a{
+    display: inline-flex;
+    padding: .8rem;
+    border: .2rem solid var(--secondary-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin: 0 .8rem;
+    transition: 0.5s;
+}
+
+.home-detail .btn-sci .sci a:hover{
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 1rem var(--secondary-color);
 }
