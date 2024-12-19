@@ -85,12 +85,13 @@ section{
 .home-detail h2{
     display: inline-block;
     font-size: 3rem;
-    margin-top: -1rem;
+    margin-top: 5px;
 }
 
 .home-detail p{
     font-size: 1.6rem;
     margin-top: 2rem 0 2.5rem;
+    margin-top: 10px;
 }
 
 .home-detail .btn-sci{
