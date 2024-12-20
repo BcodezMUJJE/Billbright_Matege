@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,23 +9,24 @@
     font-family: "Poppins", sans-serif;
 }
 
-:root{
+:root {
     --bg-color: #1f242d;
     --main-color: #323946;
     --secondary-color: #7cf03d;
     --white-color: #fff;
     --disabled-color: #fff3;
+    --second-bg-color: #2a2e38; /* Added for proper use in services box */
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     color: var(--white-color);
 }
 
-header{
+header {
     background-color: var(--bg-color);
     padding: 2rem 9%;
     display: flex;
@@ -38,13 +39,13 @@ header{
     z-index: 100;
 }
 
-.logo{
+.logo {
     font-size: 3rem;
     color: var(--white-color);
     font-weight: 700;
 }
 
-nav a{
+nav a {
     color: var(--white-color);
     font-size: 1.6rem;
     font-weight: 500;
@@ -53,92 +54,106 @@ nav a{
 }
 
 nav a:hover,
-nav a.active{
+nav a.active {
     color: var(--secondary-color);
 }
 
-#menu-icon{
+#menu-icon {
     display: none;
     font-size: 2.5rem;
     color: var(--white-color);
     cursor: pointer;
 }
 
-section{
+section {
     position: absolute;
     width: 100%;
     height: 100%;
     padding: 10rem 9% 2rem;
     background-color: var(--bg-color);
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
 }
 
-.home{
+section.active {
+    visibility: visible;
+    opacity: 1;
+    overflow: auto;
+}
+
+.home {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 5rem;
 }
 
-.home-detail{
+.home-detail {
     padding-right: 10rem;
 }
 
-.home-detail h1{
+.home-detail h1 {
     font-size: clamp(3.5rem, 10vw, 5.5rem);
 }
 
-.home-detail h2{
+.home-detail h2 {
     display: inline-block;
     font-size: 2.5rem;
     margin-top: 5px;
 }
 
-.home-detail h2 span{
-    -webkit-text-stroke: .07rem var(--secondary-color);
+.home-detail h2 span {
+    -webkit-text-stroke: 0.07rem var(--secondary-color);
     position: relative;
     color: transparent;
     display: inline-block;
-    text
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
 }
 
-.home-detail h2 span::before{
+@keyframes display-text {
+    25%, 100% {
+        display: none;
+    }
+}
+
+.home-detail h2 span::before {
     content: attr(data-text);
     position: absolute;
     width: 0;
-    border-right: .2rem solid var(--secondary-color);
+    border-right: 0.2rem solid var(--secondary-color);
     color: blue;
     white-space: nowrap;
     overflow: hidden;
     animation: fill-text 10s linear infinite;
 }
 
-@keyframes fill-text{
-    10%,
-    100%{
+@keyframes fill-text {
+    10%, 100% {
         width: 0;
     }
-    70%,
-    90%{
+    70%, 90% {
         width: 100%;
     }
 }
 
-.home-detail p{
+.home-detail p {
     font-size: 1.6rem;
-    margin-top: 2rem 0 2.5rem;
+    margin-top: 2rem;
 }
 
-.home-detail .btn-sci{
+.home-detail .btn-sci {
     display: flex;
     align-items: center;
     margin-top: 25px;
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: 1rem 3rem;
     background: rgb(6, 78, 212);
-    border: .2rem solid var(--secondary-color);
+    border: 0.2rem solid var(--secondary-color);
     border-radius: 4.5rem;
     font-size: 1.6rem;
     color: var(--white-color);
@@ -147,28 +162,28 @@ section{
     box-shadow: 0 0 1rem var(--secondary-color);
 }
 
-.btn:hover{
+.btn:hover {
     background-color: transparent;
     border-color: var(--white-color);
     box-shadow: none;
 }
 
-.home-detail .btn-sci .sci{
+.home-detail .btn-sci .sci {
     margin-left: 2rem;
 }
 
-.home-detail .btn-sci .sci a{
+.home-detail .btn-sci .sci a {
     display: inline-flex;
-    padding: .8rem;
-    border: .2rem solid var(--secondary-color);
+    padding: 0.8rem;
+    border: 0.2rem solid var(--secondary-color);
     border-radius: 50%;
     font-size: 2rem;
     color: var(--secondary-color);
-    margin: 0 .8rem;
+    margin: 0 0.8rem;
     transition: 0.5s;
 }
 
-.home-detail .btn-sci .sci a:hover{
+.home-detail .btn-sci .sci a:hover {
     background-color: var(--secondary-color);
     color: var(--bg-color);
     box-shadow: 0 0 1rem var(--secondary-color);
@@ -179,19 +194,19 @@ section{
     margin-top: -35rem;
 }
 
-.home-img .img-box{
+.home-img .img-box {
     position: relative;
     width: 32vw;
     height: 32vw;
     border-radius: 50%;
-    padding: .5rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
-.home-img .img-box::before{
+.home-img .img-box::before {
     content: "";
     position: absolute;
     width: 50rem;
@@ -202,22 +217,17 @@ section{
     animation: rotate-border 5s linear infinite;
 }
 
-.home-img .img-box::after{
-    animation: -5s;
-}
-
-@keyframes rotate-border{
-    100%{
+@keyframes rotate-border {
+    100% {
         transform: rotate(360deg);
     }
 }
 
-.home-img .img-box .img-item{
+.home-img .img-box .img-item {
     position: relative;
     width: 100%;
     height: 100%;
     background: var(--bg-color);
-    border: .01rem solid var(--bg-color);
     display: flex;
     justify-content: center;
     border-radius: 50%;
@@ -225,14 +235,89 @@ section{
     overflow: hidden;
 }
 
-.home-img .img-box .img-item img{
+.home-img .img-box .img-item img {
     position: absolute;
     top: 50%;
     left: 50%;
-    right: 50%;
     transform: translate(-50%, -50%);
-    display: block;
     width: 155%;
     object-fit: cover;
     mix-blend-mode: lighten;
+}
+
+.heading {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.heading span {
+    color: var(--secondary-color);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+.services-container .services-box {
+    padding: 3rem 2.5rem;
+    background: var(--second-bg-color);
+    border: 0.2rem solid blueviolet;
+    border-radius: 1rem;
+    transition: 0.5s;
+}
+
+.services-container .services-box:hover {
+    border-color: var(--secondary-color);
+    background: var(--bg-color);
+}
+
+.services-box .icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services-box:hover .icon :not(a i) {
+    color: var(--secondary-color);
+}
+
+.services-box .icon i {
+    font-size: 4.5rem;
+    transition: 0.5s;
+}
+
+.services-box .icon a {
+    display: inline-flex;
+    background: var(--white-color);
+    border-radius: 50%;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.services-box:hover .icon a {
+    background: var(--secondary-color);
+    box-shadow: 0 0 1rem var(--secondary-color);
+}
+
+.services-box .icon a i {
+    font-size: 3rem;
+    color: var(--bg-color);
+    transform: rotate(225deg);
+}
+
+.services-box h3 {
+    font-size: 3rem;
+    margin: 0.5rem 0 2rem;
+    transition: 0.5s;
+}
+
+.services-box:hover h3 {
+    color: var(--secondary-color);
+}
+
+.services-box p {
+    font-size: 1rem;
 }
