@@ -89,8 +89,38 @@ section{
 
 .home-detail h2{
     display: inline-block;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-top: 5px;
+}
+
+.home-detail h2 span{
+    -webkit-text-stroke: .07rem var(--secondary-color);
+    position: relative;
+    color: transparent;
+    display: inline-block;
+    text
+}
+
+.home-detail h2 span::before{
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: .2rem solid var(--secondary-color);
+    color: blue;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 10s linear infinite;
+}
+
+@keyframes fill-text{
+    10%,
+    100%{
+        width: 0;
+    }
+    70%,
+    90%{
+        width: 100%;
+    }
 }
 
 .home-detail p{
