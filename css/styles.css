@@ -355,6 +355,7 @@ section.active {
     margin-bottom: 2rem;
     border-radius: .8rem;
     cursor: pointer;
+    transition: background 0.3s, color 0.3s, border 0.3s;
 }
 
 .resume-container .resume-btn.active {
