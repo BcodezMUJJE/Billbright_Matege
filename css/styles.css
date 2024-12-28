@@ -363,7 +363,20 @@ section.active {
     color: var(--secondary-color);
 }
 
+.resume-detail {
+    display: none;
+}
+
+.resume-detail.active{
+    display: block;
+}
+
 .resume-box .resume-detail p {
     font-size: 1.4rem;
     margin: 1rem 0;
+}
+
+.resume-box.heading {
+    font-size: 3.5rem;
+    text-align: left;
 }
