@@ -15,3 +15,4 @@ resumeBtns.forEach((btn, idx) => {
     resumeDetails[idx].classList.add('active');
   });
 });
+
