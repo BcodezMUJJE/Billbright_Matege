@@ -190,8 +190,13 @@ section.active {
 }
 
 .home-img {
+    display: none;
     margin-left: 75rem;
     margin-top: -35rem;
+}
+
+.home .home-img.active {
+    display: block;
 }
 
 .home-img .img-box {
