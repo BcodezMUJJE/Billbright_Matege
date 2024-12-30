@@ -490,3 +490,24 @@ section.active {
     font-size: 16px;
     font-weight: 500;
 }
+
+.resume-detail.about .resume-list {
+    height: auto;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+.resume-detail.about .resume-item {
+    height: auto;
+    padding: 0 0 .5rem;
+    background: transparent;
+}
+
+.resume-detail.about .resume-item p {
+    color: var(--secondary-color);
+}
+
+.resume-detail.about .resume-item p span {
+    color: var(--white-color);
+    margin-left: 1rem;
+    font-size: 1.4rem;
+}
