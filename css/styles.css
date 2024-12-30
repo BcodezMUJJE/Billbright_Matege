@@ -236,13 +236,15 @@ section.active {
     display: flex;
     justify-content: center;
     border-radius: 50%;
+    border: 0.01rem solid var(--bg-color);
     z-index: 1;
     overflow: hidden;
 }
 
 .home-img .img-box .img-item img {
     position: absolute;
-    top: 50%;
+    top: 3rem;
+    display: block;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 155%;
