@@ -532,3 +532,57 @@ section.active {
     color: transparent;
     line-height: 1;
 }
+
+.portfolio-box h3{
+    font-size: 3.5rem;
+    margin: .8rem 0 2rem;
+}
+
+.portfolio-box p{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio-box .tech{
+    margin: 2rem 0;
+    color: var(--secondary-color);
+    border-bottom: .1rem solid var(--white-color);
+    padding-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.portfolio-box .live-github a{
+    position: relative;
+    display: inline-flex;
+    padding: 1.3rem;
+    font-size: 3rem;
+    color: white;
+    border-radius: 50%;
+    background: var(--second-bg-color);
+}
+
+.portfolio-box .live-github a:first-child{
+    margin-right: 1.6rem;
+}
+
+.portfolio-box .live-github a:first-child i {
+    transform: rotate(135deg);
+}
+
+.portfolio-box .live-github a span{
+    position: absolute;
+    top: -60%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 1.6rem;
+    white-space: nowrap;
+    padding: .5rem 1rem;
+    border-radius: .6rem;
+    pointer-events: none;
+    background: var(--white-color);
+    color: var(--bg-color);
+    opacity: 0;
+    scale: .9;
+}
