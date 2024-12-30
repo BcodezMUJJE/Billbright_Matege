@@ -585,4 +585,11 @@ section.active {
     color: var(--bg-color);
     opacity: 0;
     scale: .9;
+    transition: .5s;
+}
+
+.portfolio-box .live-github a:hover span{
+    top: -70%;
+    opacity: 1;
+    scale: 1;
 }
