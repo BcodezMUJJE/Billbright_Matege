@@ -511,3 +511,24 @@ section.active {
     margin-left: 1rem;
     font-size: 1.4rem;
 }
+
+.porforlio-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr));
+    gap: 3rem;
+}
+
+.portfolio-detail {
+    display: none;
+}
+
+.portfolio-detail.active {
+    display: block;
+}
+
+.portfolio-box .numb{
+    font-size: 8rem;
+    -webkit-text-stroke: .07rem var(--white-color);
+    color: transparent;
+    list-height: 1;
+}
