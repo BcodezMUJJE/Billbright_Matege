@@ -514,15 +514,15 @@ section.active {
 
 .porforlio-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr));
+    grid-template-columns: repeat((2, 1fr));
     gap: 3rem;
 }
 
-.portfolio-detail {
+.portfolio-details {
     display: none;
 }
 
-.portfolio-detail.active {
+.portfolio-details.active {
     display: block;
 }
 
@@ -530,5 +530,5 @@ section.active {
     font-size: 8rem;
     -webkit-text-stroke: .07rem var(--white-color);
     color: transparent;
-    list-height: 1;
+    line-height: 1;
 }
