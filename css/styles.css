@@ -561,6 +561,13 @@ section.active {
     color: white;
     border-radius: 50%;
     background: var(--second-bg-color);
+    transition: .3s;
+}
+
+.portfolio-box .live-github a:hover{
+    background: var(--white-color);
+    color: black;
+    box-shadow: var(--secondary-color) 0 0 1rem;
 }
 
 .portfolio-box .live-github a:first-child{
@@ -585,7 +592,7 @@ section.active {
     color: var(--bg-color);
     opacity: 0;
     scale: .9;
-    transition: .5s;
+    transition: .1s;
 }
 
 .portfolio-box .live-github a:hover span{
