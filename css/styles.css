@@ -455,9 +455,9 @@ section.active {
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: var(--secondary-color);
     border-radius: 10px;
-    box-shadow: 0 4px 10px var(--secondary-color);
+    box-shadow: 0 4px 10px #fff;
 }
 
 .skill-item {
