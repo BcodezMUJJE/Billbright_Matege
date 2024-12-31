@@ -152,7 +152,7 @@ section.active {
 .btn {
     display: inline-block;
     padding: 1rem 3rem;
-    background: rgb(6, 78, 212);
+    background: var(--secondary-color);
     border: 0.2rem solid var(--secondary-color);
     border-radius: 4.5rem;
     font-size: 1.6rem;
@@ -334,13 +334,14 @@ section.active {
 }
 
 .resume-container {
-    display: grid;
-    grid-template-columns: 1fr, 2fr;
+    display: inline;
+    grid-template-columns: 1fr, 1fr;
     gap: 5rem;
 }
 
 .resume-container h2 {
     font-size: 4.5rem;
+    color: orange;
 }
 
 .resume-container p{
@@ -655,4 +656,90 @@ section.active {
 .portforlio-box .navigation .arrow-right {
     margin-left: 1.5rem;
  
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr, 1.4fr;
+    gap: 3rem;
+}
+
+.contact-container .contact-box {
+    align-self: center;
+    padding: 3rem 2.5rem;
+    background: var(--second-bg-color);
+    border: .1rem solid var(--secondary-color);
+    border-radius: 1rem;
+    transition: .5s;
+}
+
+.contact-box h2 {
+    font-size: 4.5rem;
+    color: var(--secondary-color);
+}
+
+.contact-box p {
+    font-size: 1.6rem;
+}
+
+.contact-box .desc {
+    margin: 2rem 0 2.5rem;
+}
+
+.contact-box .contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 2rem 0;
+}
+
+.contact-detail i {
+    display: inline-flex;
+    background: var(--bg-color);
+    font-size: 3rem;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    color: var(--secondary-color);
+    margin-right: 1.5rem;
+}
+
+.contact-detail .detail p:first-child {
+    color: var(--secondary-color);
+}
+
+.contact-box form {
+    background: var(--second-bg-color);
+    padding: 2.3rem 3.5rem 3.5rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.contact-box .heading {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-box .field-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+}
+
+.contact-box .field-box input,
+.contact-box .field-box textarea {
+    padding: 1.6rem;
+    background: var(--bg-color);
+    border: .15rem solid var(--bg-color);
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
+
+.contact-box .field-box textarea {
+    grid-column: 1 / -1;
+    height: 26rem;
+    resize: none;
+}
+
+.contact-box .field-box input:focus,
+.contact-box .field-box textarea:focus {
+    border-color: var(--secondary-color);   
 }
