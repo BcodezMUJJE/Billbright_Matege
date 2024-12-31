@@ -56,6 +56,7 @@ nav a {
 nav a:hover,
 nav a.active {
     color: var(--secondary-color);
+    box-shadow: #7cf03d 0 0.2rem;
 }
 
 #menu-icon {
@@ -71,7 +72,6 @@ section {
     height: 100%;
     padding: 10rem 9% 2rem;
     background-color: var(--bg-color);
-    visibility: hidden;
     opacity: 0;
     overflow: hidden;
 }
@@ -189,16 +189,6 @@ section.active {
     box-shadow: 0 0 1rem var(--secondary-color);
 }
 
-.home-img {
-    display: none;
-    margin-left: 75rem;
-    margin-top: -35rem;
-}
-
-.home .home-img.active {
-    display: block;
-}
-
 .home-img .img-box {
     position: relative;
     width: 32vw;
@@ -250,6 +240,10 @@ section.active {
     width: 155%;
     object-fit: cover;
     mix-blend-mode: lighten;
+    margin-left: 4.5rem;
+    margin-top: 24em;
+    margin-bottom: 10rem;
+}
 }
 
 .heading {
@@ -742,4 +736,10 @@ section.active {
 .contact-box .field-box input:focus,
 .contact-box .field-box textarea:focus {
     border-color: var(--secondary-color);   
+}
+
+.contact-box .btn {
+    margin-top: 3rem;
+    margin-bottom: 0cap;
+    cursor: pointer;
 }
