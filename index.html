@@ -7,6 +7,7 @@
 
     <!-- swiper css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
 
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -33,7 +34,7 @@
         </nav>
     </header>
     <!-- home section end -->
-    <section class="home active">
+    <section class="home">
         <div class="home-detail">
             <h1>Billbright Matege</h1>
             <h2>Skilled In
@@ -420,7 +421,7 @@
     </section>
 
     <!-- PORTFOLIO SESSION start -->
-    <section class="portfolio active">
+    <section class="portfolio">
         <h2 class="heading"><span>My</span> Latest <span>Projects</span></h2>
         <div class="portfolio-container">
             <div class="portfolio-box">
@@ -441,6 +442,7 @@
                 </div>
                 <div class="portfolio-details">
                     <p class="numb">02</p>
+                    <h3>City Church Website</h3>
                 </div>
                 <div class="portfolio-details">
                     <p class="numb">03</p>
@@ -474,14 +476,60 @@
                 </div>
 
                 <div class="navigation">
-                    <button class="arrow-left"><i class='bx bxs-left-arrow' ></i></button>
+                    <button class="arrow-left disabled"><i class='bx bxs-left-arrow' ></i></button>
                     <button class="arrow-right"><i class='bx bxs-right-arrow' ></i></button>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section class="Contact active">
+        <div class="contact-container">
+            <div class="contact-box">
+                <h2>Lets Work Together</h2>
+                <p>Have a project in mind or just want to say hi? Feel free to get in touch.</p>
+                <div class="contact-detail">
+                    <div class="detail">
+                        <i class='bx bxs-phone-call'></i>
+                        <p>Phone</p>
+                        <p>+256 700 907 712</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="detail">
+                        <i class='bx bxl-gmail' ></i>
+                        <p>Email</p>
+                        <p>billbrightmatege@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="detail">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Address</p>
+                        <p>Kampala - Luzira</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <form action="">
+                    <h2>Get In <span>Touch</span></h2>
+                    <div class="field-box">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="text" placeholder="Phone Number" required>
+                        <input type="text" placeholder="Email Subject" required>
+                        <textarea name="" id="" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Link to your JavaScript file -->
     <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </body>
 </html>

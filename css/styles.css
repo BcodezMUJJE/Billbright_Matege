@@ -601,9 +601,12 @@ section.active {
 }
 
  .portfolio-box .portfolio-carousel {
-    width: 100%;
-    height: 45rem;
-    border-radius: 1.5rem;
+    width: 135rem;
+    height: 95rem;
+    border-radius: 3.5rem;
+    overflow: hidden;
+    margin-top: 4rem;
+    box-shadow: #7cf03d 0 0 1rem;
 
  }
 
@@ -624,7 +627,7 @@ section.active {
  .portfolio-carousel .img-item img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 95%;
     object-fit: cover;
  }
 
@@ -642,6 +645,11 @@ section.active {
     font-size: 1.6rem;
     color: var(--secondary-color);
     cursor: pointer;
+}
+
+.portfolio-box .navigation button.disabled {
+    background-color: var(--second-bg-color-color);
+    color: var(--disabled-color);
 }
 
 .portforlio-box .navigation .arrow-right {
