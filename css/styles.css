@@ -240,7 +240,7 @@ section.active {
     width: 155%;
     object-fit: cover;
     mix-blend-mode: lighten;
-    margin-left: 4.5rem;
+    margin-left: 3.6rem;
     margin-top: 24em;
     margin-bottom: 10rem;
 }
@@ -740,6 +740,6 @@ section.active {
 
 .contact-box .btn {
     margin-top: 3rem;
-    margin-bottom: 0cap;
+    margin-bottom: 1rem;
     cursor: pointer;
 }
