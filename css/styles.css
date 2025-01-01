@@ -37,6 +37,20 @@ header {
     left: 0;
     align-items: center;
     z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+}
+
+header.active {
+    animation: show-header 1.5s linear forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes show-header {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 .logo {
@@ -66,20 +80,64 @@ nav a.active {
     cursor: pointer;
 }
 
+.bars-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.bars-box .bar{
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    animation: hide-bars 0.5s ease-in-out both;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes hide-bars {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100);
+    }
+}
+
+.bars-box.active .bar {
+    animation: show-bars 0.5s ease-in-out both;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes show-bars {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 section {
     position: absolute;
     width: 100%;
     height: 100%;
     padding: 10rem 9% 2rem;
-    background-color: var(--bg-color);
     opacity: 0;
     overflow: hidden;
 }
 
 section.active {
-    visibility: visible;
-    opacity: 1;
-    overflow: auto;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.8s;
+}
+
+@keyframes show-content {
+    100% {
+        visibility: visible;
+        opacity: 1;
+        overflow: auto;
+    }
 }
 
 .home {
@@ -108,7 +166,7 @@ section.active {
     position: relative;
     color: transparent;
     display: inline-block;
-    animation: display-text 16s linear infinite;
+    animation: display-text 25s linear infinite;
     animation-delay: calc(-4s * var(--i));
 }
 
@@ -123,7 +181,7 @@ section.active {
     position: absolute;
     width: 0;
     border-right: 0.2rem solid var(--secondary-color);
-    color: blue;
+    color: var(--secondary-color);
     white-space: nowrap;
     overflow: hidden;
     animation: fill-text 10s linear infinite;
@@ -742,4 +800,32 @@ section.active {
     margin-top: 3rem;
     margin-bottom: 1rem;
     cursor: pointer;
+}
+
+/* breakpoints */
+
+@media screen and (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    header{
+        padding: 2rem 4%;
+    }
+
+    section {
+        padding: 10rem 4% 2rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+* Responsive styles for very small mobile devices */
+@media screen and (max-width: 480px) {
+
 }
